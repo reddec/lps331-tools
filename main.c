@@ -39,7 +39,7 @@ void summary(const char *command) {
     printf("\n");
     printf("Profiles:\n");
     printf("    0 - Updates rates: 1Hz temperature and 1Hz pressure\n");
-    printf("    1 - Updates rates: 1Hz temperature and 7Hz pressure\n");
+    printf("    1 - Updates rates: 7Hz temperature and 1Hz pressure\n");
     printf("    2 - Updates rates: 12Hz temperature and 1Hz pressure\n");
     printf("    3 - Updates rates: 25Hz temperature and 1Hz pressure\n");
     printf("    4 - Updates rates: 7Hz temperature and 7Hz pressure\n");
