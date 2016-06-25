@@ -6,6 +6,9 @@ API libraries and CLI Tools for LPS331 sensor.
 
 ## Obtain
 
+[You may use precompilled versions](https://github.com/reddec/lps331-tools/releases) 
+or build from source
+
 ### Build requirements
 
 1. CMake 2.8
