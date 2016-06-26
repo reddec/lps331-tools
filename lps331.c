@@ -1,5 +1,5 @@
 /* *
- * This file contains implemetation of API for basic communication with LPS 332 sensor
+ * This file contains implementation of API for basic communication with LPS 332 sensor
  *
  * This file is part of lps331-tools.
  *
