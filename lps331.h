@@ -32,7 +32,7 @@
 // All profiles includes ACTIVE power mode and different rates
 typedef enum {
     LPS331_PROFILE_PRESS_1HZ_TEMP_1HZ = 0b10010000, //Updates rates: 1Hz temperature and 1Hz pressure
-    LPS331_PROFILE_PRESS_7HZ_TEMP_1HZ = 0b10100000, //Updates rates: 1Hz temperature and 7Hz pressure
+    LPS331_PROFILE_PRESS_7HZ_TEMP_1HZ = 0b10100000, //Updates rates: 1Hz temperature and 1Hz pressure
     LPS331_PROFILE_PRESS_12HZ_TEMP_1HZ = 0b10110000, //Updates rates: 12Hz temperature and 1Hz pressure
     LPS331_PROFILE_PRESS_25HZ_TEMP_1HZ = 0b11000000, //Updates rates: 25Hz temperature and 1Hz pressure
     LPS331_PROFILE_PRESS_7HZ_TEMP_7HZ = 0b11010000, //Updates rates: 7Hz temperature and 7Hz pressure
