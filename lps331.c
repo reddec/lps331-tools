@@ -110,6 +110,7 @@ int lps331_open_device(const char *device, uint8_t address) {
         return -1;
     }
     if (ioctl(bus_fd, I2C_SLAVE, address) < 0) {
+        close(bus_fd);
         return -1;
     }
     return bus_fd;
