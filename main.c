@@ -23,9 +23,11 @@
 
 #include <stdio.h>
 #include <stdint.h>
+#include <inttypes.h>
 #include <time.h>
 #include <memory.h>
 #include <stdlib.h>
+#include <sys/time.h>
 #include "lps331.h"
 
 void summary(const char *command) {
@@ -100,12 +102,15 @@ int main(int argc, char **argv) {
     while (1) {
         skipped = true;
         status = lps331_status(bus_fd);
+        struct timeval now;
+        gettimeofday(&now, NULL);
+        uint64_t nano_time = (uint64_t) (now.tv_sec) * (1000 * 1000 * 1000) + now.tv_usec * 1000;
         if (lps331_status_has_temperature(status)) {
-            printf("temp %f %s\n", lps331_temperature(bus_fd), "c");
+            printf("temp %f %s %" PRIu64 "\n", lps331_temperature(bus_fd), "c", nano_time);
             skipped = false;
         }
         if (lps331_status_has_pressure(status)) {
-            printf("pressure %f %s\n", lps331_pressure(bus_fd), "mbar");
+            printf("pressure %f %s %" PRIu64 "\n", lps331_pressure(bus_fd), "mbar", nano_time);
             skipped = false;
         }
         if (!skipped) {
